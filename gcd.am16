@@ -1,0 +1,16 @@
+# calculates the GCD of values in ax, bx
+# div instruction always leaves remainder in cx
+mov 12 ax
+mov 18 bx
+mov ax cx
+sub bx cx
+jn 10
+div bx ax
+mov cx ax
+jz 13
+jmp 3
+div ax bx
+mov cx bx
+jnz 3
+add ax bx
+push bx

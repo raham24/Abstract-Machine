@@ -1,0 +1,35 @@
+# Recursive n!, n passed on stack
+# int f(int n) {if (n<2) return 1; else return n*f(n-1); }
+# This program calculates 4!=24 and 6!=720.
+
+jmp 25      # skip past procedure
+push bp     # start of n! procedure
+mov sp bp
+mov sp ma
+sub 3 ma
+load ax
+mov ax cx
+sub 1 cx
+jz 22
+push ax
+push cx
+call 2
+pop cx
+pop ax
+mult cx ax
+mov bp ma
+sub 3 ma
+store ax
+mov bp sp
+pop bp
+ret
+mov 1 ax
+jmp 16
+nop     # program starts below
+push 4
+call 2
+pop bx
+push 6
+call 2
+pop ax
+

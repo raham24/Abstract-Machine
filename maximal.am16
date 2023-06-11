@@ -1,0 +1,25 @@
+# Find the largest of first 10 values on stack, load value into ax
+push 7
+push 9
+push 2
+push 11
+push 6
+push 3
+push 15
+push 13
+push 1
+push 8
+mov 10 cx
+jz 24
+mov sp ma
+sub cx ma
+push cx
+load bx
+mov bx cx
+sub ax cx
+jn 21
+mov bx ax
+pop cx
+sub 1 cx
+jmp 12
+nop

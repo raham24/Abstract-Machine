@@ -1,0 +1,46 @@
+# As soon as the specs of AMF+1 became available, nasty hackers started
+# targeting it.  In particular there's someone with nickname "Hacker 99"
+# who likes to inject malicious code into faulty implementations of the
+# specs.  The code would leave 99 or 9999 into the main registers and top
+# of the stack, and even in PC as proof that the system's been hacked.
+# CATCH THIS MOTHERHACKER!
+
+# mystery program.  what's this?  run it and see ...
+
+mov 29 ax
+mult 100 ax
+add 46 ax
+mult 10 ax
+mov 4 bx
+add ax bx
+mov 3 cx
+add 1 ma
+store bx   # 9
+sub 1 cx
+jz 15
+add 1 bx
+add 1 ma
+jmp 9
+mov 130 bx  # 15
+mult 100 bx
+add 88 bx
+add 1 ma
+store bx
+add 1 ma
+mov 48 bx
+mult 100 bx
+add 88 bx
+store bx
+add 1 ma
+mov 225 bx
+mult 100 bx
+add 28 bx
+store bx
+add 1 ma
+mov 61 bx
+mult 100 bx
+add 44 bx
+mult 10 bx
+store bx
+add 1 ma
+jz 1

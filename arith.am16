@@ -1,0 +1,11 @@
+# simple arithmetic, using registers and stack
+# calculates 8-2*3, leaves result on stack
+push 8
+push 2
+push 3
+pop ax
+pop bx
+mult ax bx
+pop ax
+sub bx ax
+push ax
